@@ -1,0 +1,122 @@
+#include <iostream>
+#include <cstdlib>
+#include <string.h>
+
+void letranum(int, char[]);
+
+using namespace std; 
+
+int main(){
+	
+	char numero [20];
+	int num;
+	
+	cout<<endl<<"Ingresa el numero: ";
+	cin>>num;
+	
+	if(num>=0 && num<=1100){
+			letranum(num,numero);
+		
+	}else{
+		cout<<endl<<"Error en el numero ";
+	}
+	
+	
+	return 0;
+}
+
+void letranum(int num, char numero[]){
+	int mil;
+	int cien;
+	int diez;
+	int uno;
+	
+	mil=num/1000;
+	cien=(num%1000)/100;
+	diez=((num%1000)%100)/10;
+	uno=((num%1000)%100)%10;
+	
+	//cout<<endl<<mil<<" "<<cien<<" "<<diez<<" "<<uno<<" ";
+	
+	
+	if(mil==1){
+		cout<<endl<<"mil ";
+	}
+	
+	switch(cien){
+		case 1: cout<<"ciento ";
+			break;
+		case 2: cout<<"doscientos ";
+			break;
+		case 3: cout<<"trescientos ";
+			break;
+		case 4: cout<<"cuatrocientos ";
+			break;
+		case 5: cout<<"quinientos ";
+			break;
+		case 6: cout<<"seiscientos ";
+			break;
+		case 7: cout<<"setecientos ";
+			break;
+		case 8: cout<<"ochocientos ";
+			break;
+		case 9: cout<<"novecientos ";
+			break;
+		case 0: cout<<"";
+			break;
+										
+	}
+	
+		switch(diez){
+		case 1: cout<<"diez ";
+			break;
+		case 2: cout<<"veinte ";
+			break;
+		case 3: cout<<"treinta ";
+			break;
+		case 4: cout<<"cuarenta ";
+			break;
+		case 5: cout<<"cincuenta ";
+			break;
+		case 6: cout<<"sesenta ";
+			break;
+		case 7: cout<<"setenta ";
+			break;
+		case 8: cout<<"ochenta ";
+			break;
+		case 9: cout<<"noventa ";
+			break;
+		case 0: cout<<" ";
+			break;
+										
+	}
+	
+		switch(uno){
+		case 1: cout<<"y uno ";
+			break;
+		case 2: cout<<"y dos ";
+			break;
+		case 3: cout<<"y tres ";
+			break;
+		case 4: cout<<"y cuatro ";
+			break;
+		case 5: cout<<"y cinco ";
+			break;
+		case 6: cout<<"y seis ";
+			break;
+		case 7: cout<<"y siete ";
+			break;
+		case 8: cout<<"y ocho ";
+			break;
+		case 9: cout<<"y nueve ";
+			break;
+		case 0: cout<<" ";
+			break;
+										
+	}
+
+	
+	
+	
+	
+}
